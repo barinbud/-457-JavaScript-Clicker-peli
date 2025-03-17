@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Cookie Clicker</title>
+</head>
+<body>
+  <h1>Clicker Game</h1>
+  <div class="cookie-container">
+    <p id="cookieCountDisplay" class="score">0</p>
+    <button onclick="cookieClick()" class="cookie-button">Click Here</button>
+    <div>
+      <p id="eventMessage"></p>
+    </div>
+  </div>
+  
+  <div class="upgrade-shop-container">
+    
+    <div class="upgrade-section">
+      <p class="shop-title">Upgrades</p>
+      <table class="game-table">
+        <thead>
+          <tr class="table-header">
+            <th>Upgrades</th>
+            <th>Cost</th>
+            <th>Purchase</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Basic Upgrade</td>
+            <td id="clickUpgradeCostDisplay" class="upgrade-cost">600</td>
+            <td><button onclick="upgradeClickPower()">Buy Upgrade</button></td>
+          </tr>
+          <tr>
+            <td>Super Upgrade</td>
+            <td id="gadgetUpgradeCostDisplay" class="upgrade-cost">1200</td>
+            <td><button onclick="upgradeGenerator(1)">Buy Upgrade</button></td>
+          </tr>
+          <tr>
+            <td>Giga Upgrade</td>
+            <td id="fieldUpgradeCostDisplay" class="upgrade-cost">3000</td>
+            <td><button onclick="upgradeGenerator(2)">Buy Upgrade</button></td>
+          </tr>
+          <tr>
+            <td>Galactic Upgrade</td>
+            <td id="operatorUpgradeCostDisplay" class="upgrade-cost">6000</td>
+            <td><button onclick="upgradeGenerator(3)">Buy Upgrade</button></td>
+          </tr>
+          <tr>
+            <td>Omni Upgrade</td>
+            <td id="deviceUpgradeCostDisplay" class="upgrade-cost">12000</td>
+            <td><button onclick="upgradeGenerator(4)">Buy Upgrade</button></td>
+          </tr>
+          <tr>
+            <td>Apocalyptic Upgrade</td>
+            <td id="labUpgradeCostDisplay" class="upgrade-cost">90000</td>
+            <td><button onclick="upgradeGenerator(5)">Buy Upgrade</button></td>
+          </tr>
+          <tr>
+            <td>God-Tier Upgrade</td>
+            <td id="darkUpgradeCostDisplay" class="upgrade-cost">15000000</td>
+            <td><button onclick="upgradeGenerator(6)">Buy Upgrade</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <div class="shop-section">
+      <p class="shop-title">Item Shop</p>
+      <table class="game-table">
+        <thead>
+          <tr class="table-header">
+            <th>Item</th>
+            <th>Cost</th>
+            <th>Purchase</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Gadget: <span id="gadgetPowerDisplay"></span></td>
+            <td id="gadgetCostDisplay">Cost: 30</td>
+            <td><button onclick="purchaseGenerator(1)">Purchase</button></td>
+          </tr>
+          <tr>
+            <td>Field: <span id="fieldPowerDisplay"></span></td>
+            <td id="fieldCostDisplay">Cost: 150</td>
+            <td><button onclick="purchaseGenerator(2)">Purchase</button></td>
+          </tr>
+          <tr>
+            <td>Operator: <span id="operatorPowerDisplay"></span></td>
+            <td id="operatorCostDisplay">Cost: 800</td>
+            <td><button onclick="purchaseGenerator(3)">Purchase</button></td>
+          </tr>
+          <tr>
+            <td>Device: <span id="devicePowerDisplay"></span></td>
+            <td id="deviceCostDisplay">Cost: 6000</td>
+            <td><button onclick="purchaseGenerator(4)">Purchase</button></td>
+          </tr>
+          <tr>
+            <td>Lab: <span id="labPowerDisplay"></span></td>
+            <td id="labCostDisplay">Cost: 60000</td>
+            <td><button onclick="purchaseGenerator(5)">Purchase</button></td>
+          </tr>
+          <tr>
+            <td>Dark: <span id="darkPowerDisplay"></span></td>
+            <td id="darkCostDisplay">Cost: 2000000</td>
+            <td><button onclick="purchaseGenerator(6)">Purchase</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+  </div>
+  
+  <h1>Reset</h1>
+  <h3>Spend 1 Billion Clicks to Reset</h3>
+  <button onclick="resetGame()" id="resetButton" class="reset-button">Not Enough Clicks</button>
+  <script src="main.js"></script>
+</body>
+</html>
